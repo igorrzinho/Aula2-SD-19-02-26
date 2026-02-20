@@ -4,6 +4,7 @@
 
 ### Insegura
 - a insegura possui as credenciais direto no codigo 
+Crie o arquivo `app_inseguro.js`
 ``` js
 const express = require('express');
 const mysql = require('mysql2');
@@ -38,6 +39,16 @@ app.listen(port, () => {
 ```
 
 ### Segura
+Antes de rodar crie o arquivo `.env`
+``` env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=minhaSenha123
+DB_NAME=meubanco
+```
+
+Crie o arquivo `app_seguro.js`
+
 ``` js
 require('dotenv').config();
 const express = require('express');
